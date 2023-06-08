@@ -1,0 +1,9 @@
+<!-- Container -->
+<div class="w-full min-h-screen h-full bg-slate-600 box-border p-4 flex flex-col gap-4" infinite-scroll [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+
+  <!-- Seach -->
+  <app-search-bar [DataToSearch]="Data" (ShareResult)="searchResults($event)"></app-search-bar>
+
+  <app-card [filteredData]="filteredData"></app-card>
+</div>

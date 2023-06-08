@@ -1,0 +1,36 @@
+<div class="flex flex-wrap justify-center">
+  <!-- Card -->
+  <div
+    class="transition w-[600px] h-40 rounded bg-gray-800 text-white p-4 border-2 border-gray-700 border-solid flex gap-4 hover:bg-gray-900"
+    *ngFor="let data of filteredData">
+
+    <!-- Image -->
+    <img [src]="data.image" alt="{{data.name}} image" class="object-cover rounded">
+
+    <!-- Content -->
+    <div class="flex w-full flex-col justify-between">
+
+      <!-- Title -->
+      <section>
+        <h1 class="text-2xl font-bold">{{data.name}}</h1>
+        <p class="text-sm flex gap-1">
+
+          <span class="text-blue-500" *ngIf="data.species === 'Human'">Human</span>
+          <span class="text-orange-300" *ngIf="data.species !== 'Human'">Alien</span>
+
+          <span class="text-green-500" *ngIf="data.status === 'Alive'">Alive</span>
+          <span class="text-red-500" *ngIf="data.status !== 'Alive'">Dead</span>
+        </p>
+      </section>
+
+      <!-- Description -->
+      <div>
+        <p class="text-sm mt-2">Origin: {{data.origin.name}}</p>
+        <p class="text-sm">Location: {{data.location.name}} </p>
+        <p class="text-sm">Created: {{data.created}} </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
