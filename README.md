@@ -1,4 +1,4 @@
-# Infinity Scroll - Angular Application
+# Infinite Scroll - Angular Application
 
 ## Development server
 
